@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRO ROI Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg"></div>
+
+    <nav class="navbar">
+      <div class="logo">
+        <a href="https://www.noolmedia.in/"
+          ><img src="nool.png" alt="Logo"
+        /></a>
+      </div>
+      <ul class="nav-items">
+        <li><a href="https://www.noolmedia.in/">Home</a></li>
+        <li>
+          <a href="https://www.noolmedia.in/#mediaiskgjyue11">Services</a>
+        </li>
+        <li><a href="https://www.noolmedia.in/#comp-m0f8afp6">About Us</a></li>
+        <li><a href="https://www.noolmedia.in/blog">Blog</a></li>
+        <li><a href="https://www.noolmedia.in/#comp-lsvshvee">Projects</a></li>
+        <li>
+          <a href="https://www.noolmedia.in/#comp-lsvshvef1">Lets Talk</a>
+        </li>
+        <li>
+          <a href="https://seo-report.onrender.com/"
+            ><button class="sitescore">Site score ></button></a
+          >
+        </li>
+        <li>
+          <a href="https://www.noolmedia.in/#comp-lsvshvef1"
+            >SEO Snippet Optimizer</a
+          >
+        </li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <div class="container">
+      <h2>CRO ROI Calculator</h2>
+
+      <label>Current Conversion Rate (%)</label>
+      <input
+        type="number"
+        id="currentCR"
+        placeholder="Enter current conversion rate"
+      />
+
+      <label>Improved Conversion Rate (%)</label>
+      <input
+        type="number"
+        id="improvedCR"
+        placeholder="Enter improved conversion rate"
+      />
+
+      <label>Website Traffic</label>
+      <input
+        type="number"
+        id="traffic"
+        placeholder="Enter total website traffic"
+      />
+
+      <label>Average Order Value (₹ or $)</label>
+      <input
+        type="number"
+        id="avgOrderValue"
+        placeholder="Enter average order value"
+      />
+
+      <button onclick="calculateCRO()">Calculate ROI</button>
+
+      <div class="result" id="result" style="display: none">
+        <h3>Results</h3>
+        <p>
+          <strong>Current Conversions:</strong>
+          <span id="currentConversions"></span>
+        </p>
+        <p>
+          <strong>New Conversions:</strong> <span id="newConversions"></span>
+        </p>
+        <p>
+          <strong>Additional Conversions:</strong>
+          <span id="additionalConversions"></span>
+        </p>
+        <p>
+          <strong>Revenue Increase:</strong> <span id="revenueIncrease"></span>
+        </p>
+        <p><strong>CRO ROI (%):</strong> <span id="roi"></span></p>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
