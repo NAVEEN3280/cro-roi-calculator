@@ -34,3 +34,7 @@ function calculateCRO() {
 
   document.getElementById("result").style.display = "block";
 }
+document.getElementById("hamburger").addEventListener("click", function () {
+  const navItems = document.querySelector(".nav-items");
+  navItems.classList.toggle("active");
+});
