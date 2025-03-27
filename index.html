@@ -11,9 +11,9 @@
 
     <nav class="navbar">
       <div class="logo">
-        <a href="https://www.noolmedia.in/"
-          ><img src="nool.png" alt="Logo"
-        /></a>
+        <a href="https://www.noolmedia.in/">
+          <img src="nool.png" alt="Logo" />
+        </a>
       </div>
       <ul class="nav-items">
         <li><a href="https://www.noolmedia.in/">Home</a></li>
@@ -26,15 +26,24 @@
         <li>
           <a href="https://www.noolmedia.in/#comp-lsvshvef1">Lets Talk</a>
         </li>
-        <li>
-          <a href="https://seo-report.onrender.com/"
-            ><button class="sitescore">Site score ></button></a
-          >
-        </li>
-        <li>
-          <a href="https://www.noolmedia.in/#comp-lsvshvef1"
-            >SEO Snippet Optimizer</a
-          >
+        <li class="dropdown-container">
+          <a href="#">SEO Tools</a>
+          <div class="dropdown">
+            <a href="https://seo-report.onrender.com">Site Score</a>
+            <a href="https://cro-roi-calculator.vallaham.com/"
+              >CRO ROI Calculator</a
+            >
+            <a href="https://titletag.vallaham.com/"
+              >Meta title length checker</a
+            >
+            <a href="https://competitoraudit.vallaham.com/">Competitor Audit</a>
+            <a href="https://ppc-roi-calculator.vallaham.com/"
+              >PPC ROI Calculator</a
+            >
+            <a href="https://seo-roi-calculator.vallaham.com/"
+              >SEO ROI Calculator</a
+            >
+          </div>
         </li>
       </ul>
       <div class="hamburger" id="hamburger">
@@ -42,57 +51,57 @@
         <span></span>
         <span></span>
       </div>
+    </nav>>
     </nav>
     <div class="container">
-      <h2>CRO ROI Calculator</h2>
-
-      <label>Current Conversion Rate (%)</label>
-      <input
-        type="number"
-        id="currentCR"
-        placeholder="Enter current conversion rate"
-      />
-
-      <label>Improved Conversion Rate (%)</label>
-      <input
-        type="number"
-        id="improvedCR"
-        placeholder="Enter improved conversion rate"
-      />
-
-      <label>Website Traffic</label>
-      <input
-        type="number"
-        id="traffic"
-        placeholder="Enter total website traffic"
-      />
-
-      <label>Average Order Value (₹ or $)</label>
-      <input
-        type="number"
-        id="avgOrderValue"
-        placeholder="Enter average order value"
-      />
-
+      <div class="content">
+        <h1>CRO ROI Calculator</h1>
+        Easily predict your potential revenue with our CRO calculator. With smart CRO tweaks to your website, your revenue could explode, or if you sit on your hands and do nothing, you may watch your revenue limp along.
+      </div>
+    
+      <div class="input-group">
+        <label>How many visitors does your website get each month?</label>
+        <input
+          type="number"
+          id="traffic"
+          placeholder="Enter total website traffic"
+        />
+      </div>
+      <div class="input-group">
+        <label>What percentage of visitors currently make a purchase?</label>
+        <input
+          type="number"
+          id="cvr"
+          placeholder="Enter current conversion rate"
+        />
+      </div>
+      <div class="input-group">
+        <label>How much does the average customer spend when they make a purchase?</label>
+        <input type="number" id="aov" placeholder="Enter average order value" />
+      </div>
+      <div class="input-group">
+        <label>See how your conversion rate can impact your revenue.</label>
+        <input type="number" id="cri" placeholder="Enter CR Improvement (%)" />
+      </div>
       <button onclick="calculateCRO()">Calculate ROI</button>
 
       <div class="result" id="result" style="display: none">
         <h3>Results</h3>
         <p>
-          <strong>Current Conversions:</strong>
-          <span id="currentConversions"></span>
+          <strong>Current Monthly Revenue:</strong>
+          <span id="currentRevenue"></span>
         </p>
         <p>
-          <strong>New Conversions:</strong> <span id="newConversions"></span>
+          <strong>Projected Conversion Rate:</strong>
+          <span id="projectedCR"></span>
         </p>
         <p>
-          <strong>Additional Conversions:</strong>
-          <span id="additionalConversions"></span>
+          <strong>Projected Monthly Revenue:</strong>
+          <span id="projectedRevenue"></span>
         </p>
         <p>
           <strong>Revenue Increase:</strong> <span id="revenueIncrease"></span>
         </p>
-        <p><strong>CRO ROI (%):</strong> <span id="roi"></span></p>
       </div>
     </div>
   </body>
