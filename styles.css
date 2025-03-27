@@ -2,13 +2,19 @@
 * {
   font-family: Montserrat;
 }
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
 body {
   font-family: Montserrat;
   margin: 0;
   padding: 0;
   width: 100%;
   color: #fff;
-  height: 100vh;
   background-image: linear-gradient(to right, #7b4397, #dc2430);
 }
 .bg {
@@ -113,6 +119,7 @@ textarea {
 .container {
   position: relative;
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -180,15 +187,26 @@ button:hover {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-button:hover {
-  background-color: #0056b3;
-}
 .result {
   margin-top: 20px;
   padding: 10px;
   border-radius: 5px;
   background: #292929;
   text-align: left;
+}
+footer {
+  position: relative;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  color: #333;
+}
+footer a {
+  text-decoration: none;
+  color: #333;
 }
 @media (max-width: 768px) {
   .container {
